@@ -5,12 +5,4 @@
  * @author			daichishim
  * @license			MIT
  */
-class LineButtonConfig extends BcPluginAppModel {
-/**
- * Model Name
- * 
- * @var string
- */
-	public $name = 'LineButtonConfig';
-
-}
+class LineButtonConfig extends BcPluginAppModel {}
