@@ -5,13 +5,13 @@
  * @author			daichishim
  * @license			MIT
  */
-class LineButtonHookComponent extends Object {
+class LineButtonHookComponent extends Component {
 /**
  * 登録フック
  * 
  * @var array
  */
-	var $registerHooks = array('startup');
+	public $registerHooks = array('startup');
 /**
  * startup
  * 
@@ -19,7 +19,7 @@ class LineButtonHookComponent extends Object {
  * @access public
  * @return void
  */
-	function startup($controller) {
+	public function startup($controller) {
 		$controller->helpers[] = 'LineButton.LineButton';
 	}
 

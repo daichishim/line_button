@@ -5,4 +5,4 @@
  * @author			daichishim
  * @license			MIT
  */
-loadPluginConfig('line_button.line_button');
+loadPluginConfig('LineButton.line_button');
