@@ -5,33 +5,33 @@
  * @author			daichishim
  * @license			MIT
  */
-class LineButtonConfigsController extends BaserPluginAppController {
+class LineButtonConfigsController extends BcPluginAppController {
 /**
  * Controller Name
  * 
  * @var string
  */
-	var $name = 'LineButtonConfigs';
+	public $name = 'LineButtonConfigs';
 /**
  * Components Use
  * 
  * @var array
  */
-	var $components = array('BcAuth', 'Cookie', 'BcAuthConfigure');
+	public $components = array('BcAuth', 'Cookie', 'BcAuthConfigure');
 /**
  * 設定画面トップ
  * 
  * @return void
  * @access public
  */
-	function admin_index() {
+	public function admin_index() {
 
-		if(!$this->data) {
-			$this->data = array('LineButtonConfig' => $this->LineButtonConfig->findExpanded());
+		if(!$this->request->data) {
+			$this->request->data = array('LineButtonConfig' => $this->LineButtonConfig->findExpanded());
 		} else {
-			$this->LineButtonConfig->set($this->data);
+			$this->LineButtonConfig->set($this->request->data);
 			if($this->LineButtonConfig->validates()) {
-				if($this->LineButtonConfig->saveKeyValue($this->data)) {
+				if($this->LineButtonConfig->saveKeyValue($this->request->data)) {
 					$this->Session->setFlash('設定を保存しました。');
 					$this->redirect(array('action' => 'index'));
 				} else {
