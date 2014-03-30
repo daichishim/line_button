@@ -11,14 +11,14 @@ class LineButtonHelper extends AppHelper {
  * 
  * @var array
  */
-	var $helpers = array('BcBaser');
+	public $helpers = array('BcBaser');
 /**
  * LINEで送るボタンを表示する
  * 
  * @access public
  * @return void
  */
-	function show($options = array()) {
+	public function show($options = array()) {
 
 		$LineButtonConfig = ClassRegistry::init('LineButton.LineButtonConfig');
 		$lineButtonConfigs = array('LineButtonConfig' => $LineButtonConfig->findExpanded());
@@ -52,7 +52,7 @@ class LineButtonHelper extends AppHelper {
 
 			$url = 'http://line.naver.jp/R/msg/text/?';
 			$url .= urlencode(Router::url($this->here, true));
-			$this->BcBaser->img('/line_button/img/' . $btnImage, array(
+			$this->BcBaser->img('LineButton.' . $btnImage, array(
 				'url' => $url, 'alt' => 'LINEで送る'));
 
 		}

@@ -2,20 +2,20 @@
 /* SVN FILE: $Id$ */
 /* LineButtonConfigs schema generated on: 2012-12-27 16:12:33 : 1356594513*/
 class LineButtonConfigsSchema extends CakeSchema {
-	var $name = 'LineButtonConfigs';
+	public $name = 'LineButtonConfigs';
 
-	var $file = 'line_button_configs.php';
+	public $file = 'line_button_configs.php';
 
-	var $connection = 'plugin';
+	public $connection = 'plugin';
 
-	function before($event = array()) {
+	public function before($event = array()) {
 		return true;
 	}
 
-	function after($event = array()) {
+	public function after($event = array()) {
 	}
 
-	var $line_button_configs = array(
+	public $line_button_configs = array(
 		'id' => array('type' => 'integer', 'null' => false, 'default' => NULL, 'key' => 'primary'),
 		'name' => array('type' => 'string', 'null' => true, 'default' => NULL),
 		'value' => array('type' => 'text', 'null' => true, 'default' => NULL),
